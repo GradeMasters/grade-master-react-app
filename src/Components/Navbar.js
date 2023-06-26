@@ -1,18 +1,22 @@
 import React from 'react';
-import './Navbar.css';
-import pic from '.public/img/grademaster';
+import { Link } from 'react-router-dom';
+import { Routes } from './utils/constants';
+// import './Navbar.css'; // don't import css files directly, have a css folder that sits under src as well, 
+// then create a main css file to import all of the css files into, them import the main css into the index js file
+// import pic from '.public/img/grademaster';
 
-const Navbar = () => {
+//  THIS IS NOT GOING TO WORK - GOING TO HAVE TO USE ROUTES INSTEAD OF HREF
+export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
         <a href="/">
-            <img><img/>
+            <img />
             </a>
       </div>
       <ul className="navbar-links">
         <li>
-          <a href="/">Home</a>
+          <Link to={Routes.LOGIN}>Home</Link>
         </li>
         <li>
           <a href="/about">About</a>
@@ -27,5 +31,3 @@ const Navbar = () => {
     </nav>
   );
 };
-
-export default Navbar;

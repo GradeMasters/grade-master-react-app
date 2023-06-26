@@ -1,7 +1,5 @@
-import LogIn from "./Components/LogIn";
+import Routes from "./components/routes/Routes.js";
 
-function App() {
-  return <LogIn />;
-}
-
-export default App;
+export default function App() {
+  return <Routes />;
+};
