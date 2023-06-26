@@ -16,7 +16,7 @@ export default function Navbar() {
       </div>
       <ul className="navbar-links">
         <li>
-          <Link to={Routes.LOGIN}>Home</Link>
+          <Link to={Routes.HOME}>Home</Link>
         </li>
         <li>
           <a href="/about">About</a>
@@ -26,6 +26,9 @@ export default function Navbar() {
         </li>
         <li>
           <a href="/contact">Contact</a>
+        </li>
+        <li>
+          <Link to={Routes.LOGIN}>Log In</Link>
         </li>
       </ul>
     </nav>
