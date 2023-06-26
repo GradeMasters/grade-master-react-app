@@ -10,6 +10,7 @@ import {
 // import classnames from "classnames"; ///// package used to have multiple classnames on something
 import Navbar from "../Navbar";
 import LogIn from "../LogIn";
+import Home from "../Home";
 import { Routes as RoutesEnum } from "../utils/constants";
 // import { Routes as RoutesEnum, appClass } from "../components/utils/constants"; // used to access anything css in the top level, would be a div that wraps the routes in app.js
 // import NotFound from "../not-found/NotFound"; // this page does not exist yet for us, but will need later
@@ -18,6 +19,7 @@ import { Routes as RoutesEnum } from "../utils/constants";
 export function getRouteList() {
   const routes = [
     { path: RoutesEnum.LOGIN, main: <LogIn /> },
+    { path: RoutesEnum.HOME, main: <Home /> },
 
     // { path: RoutesEnum.NOT_FOUND, main: <NotFound /> },
   ];
@@ -49,7 +51,7 @@ export default function Routes() {
       <div>
         <Switch>
           {makeRoutes({ routeList })}
-          <Route path="/" element={<Redirect to="/login" exact />} />
+          <Route path="/" element={<Redirect to="/home" exact />} />
           {/* <Route path="*" element={<Redirect to="/not-found" />} /> */}
         </Switch>
       </div>

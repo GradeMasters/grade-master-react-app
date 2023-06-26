@@ -1,6 +1,6 @@
 import React from "react";
 
-const LogIn = () => {
+export default function LogIn() {
   return (
     <div>
       <h1>Welcome to GradeMaster!</h1>
@@ -25,5 +25,3 @@ const LogIn = () => {
     </div>
   );
 };
-
-export default LogIn;
